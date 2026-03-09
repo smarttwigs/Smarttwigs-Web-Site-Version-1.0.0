@@ -21,8 +21,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Optimus - Platform to Create',
-  description: 'The creative platform for teams who ship. Build, deploy, and scale with unprecedented velocity.',
+  title: 'Smart Twigs - Data & Software Consultancy',
+  description: 'Smart Twigs Consultancy Group: Value through Data && Technology. Innovative technology specialists offering comprehensive digital solutions and professional services.',
   generator: 'v0.app',
 }
 

@@ -3,54 +3,52 @@
 import { useState, useEffect, useRef } from "react";
 import { Copy, Check } from "lucide-react";
 
-const codeExamples = [
+const industries = [
   {
-    label: "Install",
-    code: `npm install @optimus/sdk
-
-# or
-yarn add @optimus/sdk
-pnpm add @optimus/sdk`,
-  },
-  {
-    label: "Initialize",
-    code: `import { Optimus } from '@optimus/sdk'
-
-const optimus = new Optimus({
-  apiKey: process.env.OPTIMUS_KEY
+    label: "IT",
+    code: `// Information Technology
+smarttwigs.expertise({
+  domain: 'enterprise-software',
+  solutions: ['cloud', 'devops', 'ai'],
+  scale: 'global'
 })`,
   },
   {
-    label: "Deploy",
-    code: `const app = await optimus.deploy({
-  name: 'my-app',
-  region: 'auto',
-  scaling: {
-    min: 1,
-    max: 100
-  }
-})
-
-console.log('Live at:', app.url)`,
+    label: "Finance",
+    code: `// Financial Systems
+smarttwigs.expertise({
+  domain: 'fintech',
+  solutions: ['trading', 'risk', 'compliance'],
+  security: 'bank-grade'
+})`,
+  },
+  {
+    label: "Healthcare",
+    code: `// Healthcare Systems
+smarttwigs.expertise({
+  domain: 'healthtech',
+  solutions: ['ehr', 'analytics', 'telemedicine'],
+  compliance: 'hipaa'
+})`,
   },
 ];
 
 const features = [
   { 
-    title: "TypeScript native", 
-    description: "Full type safety with auto-generated types."
+    title: "Product Development", 
+    description: "From concept to post-production delivery."
   },
   { 
-    title: "Zero config", 
-    description: "Sensible defaults that just work."
+    title: "Technical Management", 
+    description: "Integrated communication strategies."
   },
   { 
-    title: "Edge-ready", 
-    description: "Runs anywhere: Node, Deno, Bun, browsers."
+    title: "Retail Optimization", 
+    description: "Drive efficiency and maximize ROI."
   },
   { 
-    title: "12KB gzipped", 
-    description: "Lightweight with zero dependencies."
+    title: "Marketing & Ads", 
+    description: "Data-driven marketing solutions."
   },
 ];
 
@@ -89,7 +87,7 @@ export function DevelopersSection() {
   const sectionRef = useRef<HTMLElement>(null);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(codeExamples[activeTab].code);
+    navigator.clipboard.writeText(industries[activeTab].code);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -119,16 +117,16 @@ export function DevelopersSection() {
           >
             <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
               <span className="w-8 h-px bg-foreground/30" />
-              For developers
+              Industry Expertise
             </span>
             <h2 className="text-4xl lg:text-6xl font-display tracking-tight mb-8">
-              Built by devs.
+              Your industry.
               <br />
-              <span className="text-muted-foreground">For devs.</span>
+              <span className="text-muted-foreground">Our expertise.</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              A thoughtfully designed SDK that gets out of your way. 
-              Ship faster with intuitive APIs and exceptional documentation.
+              We offer extensive knowledge in different business areas. 
+              Our specialists develop concepts and solutions based on cutting-edge technology.
             </p>
             
             {/* Features */}
@@ -157,7 +155,7 @@ export function DevelopersSection() {
             <div className="border border-foreground/10">
               {/* Tabs */}
               <div className="flex items-center border-b border-foreground/10">
-                {codeExamples.map((example, idx) => (
+                {industries.map((example, idx) => (
                   <button
                     key={example.label}
                     type="button"
@@ -192,7 +190,7 @@ export function DevelopersSection() {
               {/* Code content */}
               <div className="p-8 font-mono text-sm bg-foreground/[0.01] min-h-[220px]">
                 <pre className="text-foreground/80">
-                  {codeExamples[activeTab].code.split('\n').map((line, lineIndex) => (
+                  {industries[activeTab].code.split('\n').map((line, lineIndex) => (
                     <div 
                       key={`${activeTab}-${lineIndex}`} 
                       className="leading-loose dev-code-line"
@@ -220,11 +218,11 @@ export function DevelopersSection() {
             {/* Links */}
             <div className="mt-6 flex items-center gap-6 text-sm">
               <a href="#" className="text-foreground hover:underline underline-offset-4">
-                Read the docs
+                Learn more
               </a>
               <span className="text-foreground/20">|</span>
               <a href="#" className="text-muted-foreground hover:text-foreground">
-                View on GitHub
+                View case studies
               </a>
             </div>
           </div>

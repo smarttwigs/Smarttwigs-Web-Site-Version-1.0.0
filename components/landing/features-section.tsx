@@ -5,26 +5,26 @@ import { useEffect, useRef, useState } from "react";
 const features = [
   {
     number: "01",
-    title: "Instant Deployment",
-    description: "Push to production in seconds. Our edge network ensures your applications load instantly, anywhere in the world.",
-    visual: "deploy",
-  },
-  {
-    number: "02",
-    title: "AI-Native Workflows",
-    description: "Build intelligent applications with built-in AI capabilities. From inference to training, everything scales automatically.",
+    title: "Data Science & A.I.",
+    description: "Our leading data scientists extract insights and machine learning solutions to improve your services and decision-making processes.",
     visual: "ai",
   },
   {
+    number: "02",
+    title: "System Integrations",
+    description: "We leverage existing technologies to scale your operations, connecting disparate systems into seamless workflows.",
+    visual: "deploy",
+  },
+  {
     number: "03",
-    title: "Real-time Collaboration",
-    description: "Work together seamlessly. Live preview, instant feedback, and version control that actually makes sense.",
+    title: "Mobile & Cloud Applications",
+    description: "Our teams are focused on keeping your business relevant with cutting-edge mobile and cloud solutions.",
     visual: "collab",
   },
   {
     number: "04",
-    title: "Enterprise Security",
-    description: "Bank-grade encryption, SOC 2 compliance, and granular access controls. Your data stays yours.",
+    title: "Security Management",
+    description: "Leading security experts from the largest institutions lower cyber risk and protect your digital assets.",
     visual: "security",
   },
 ];
@@ -329,16 +329,16 @@ export function FeaturesSection() {
         <div className="mb-16 lg:mb-24">
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
             <span className="w-8 h-px bg-foreground/30" />
-            Capabilities
+            Competence Areas
           </span>
           <h2
             className={`text-4xl lg:text-6xl font-display tracking-tight transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Everything you need.
+            Comprehensive solutions.
             <br />
-            <span className="text-muted-foreground">Nothing you don&apos;t.</span>
+            <span className="text-muted-foreground">Cutting-edge technology.</span>
           </h2>
         </div>
 

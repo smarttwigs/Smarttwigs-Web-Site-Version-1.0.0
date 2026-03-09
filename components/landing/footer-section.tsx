@@ -4,34 +4,33 @@ import { ArrowUpRight } from "lucide-react";
 import { AnimatedWave } from "./animated-wave";
 
 const footerLinks = {
-  Product: [
-    { name: "Features", href: "#features" },
-    { name: "How it works", href: "#how-it-works" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Integrations", href: "#integrations" },
+  Services: [
+    { name: "Data Science", href: "#features" },
+    { name: "System Integration", href: "#features" },
+    { name: "Cloud Solutions", href: "#features" },
+    { name: "Security", href: "#features" },
   ],
-  Developers: [
-    { name: "Documentation", href: "#developers" },
-    { name: "API Reference", href: "#" },
-    { name: "SDK", href: "#developers" },
-    { name: "Status", href: "#" },
+  Industries: [
+    { name: "Information Technology", href: "#developers" },
+    { name: "Financial Services", href: "#developers" },
+    { name: "Healthcare", href: "#developers" },
+    { name: "Retail", href: "#developers" },
   ],
   Company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
+    { name: "About Us", href: "#" },
+    { name: "Case Studies", href: "#" },
     { name: "Careers", href: "#", badge: "Hiring" },
-    { name: "Contact", href: "#" },
+    { name: "Contact", href: "#pricing" },
   ],
   Legal: [
     { name: "Privacy", href: "#" },
     { name: "Terms", href: "#" },
-    { name: "Security", href: "#security" },
+    { name: "Security", href: "#" },
   ],
 };
 
 const socialLinks = [
   { name: "Twitter", href: "#" },
-  { name: "GitHub", href: "#" },
   { name: "LinkedIn", href: "#" },
 ];
 
@@ -49,13 +48,12 @@ export function FooterSection() {
           <div className="grid grid-cols-2 md:grid-cols-6 gap-12 lg:gap-8">
             {/* Brand Column */}
             <div className="col-span-2">
-              <a href="#" className="inline-flex items-center gap-2 mb-6">
-                <span className="text-2xl font-display">Optimus</span>
-                <span className="text-xs text-muted-foreground font-mono">TM</span>
+              <a href="#" className="inline-block mb-6">
+                <img src="/logo.png" alt="Smart Twigs" className="h-12" />
               </a>
 
               <p className="text-muted-foreground leading-relaxed mb-8 max-w-xs">
-                The platform for teams who ship. Build, deploy, and scale with unprecedented velocity.
+                Smart Twigs Consultancy Group: Value through Data && Technology. Transforming businesses with innovative digital solutions.
               </p>
 
               {/* Social Links */}
@@ -102,7 +100,7 @@ export function FooterSection() {
         {/* Bottom Bar */}
         <div className="py-8 border-t border-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            2025 Optimus. All rights reserved.
+            2025 Smart Twigs Consultancy Group. All rights reserved.
           </p>
 
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
