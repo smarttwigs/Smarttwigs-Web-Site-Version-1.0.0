@@ -14,8 +14,10 @@ const navLinks = [
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -45,11 +47,15 @@ export function Navigation() {
         >
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <img 
-              src="/logo.png" 
-              alt="Smart Twigs" 
-              className={`transition-all duration-500 ${isScrolled ? "h-8" : "h-10"}`}
-            />
+            {mounted ? (
+              <img 
+                src="/logo.png" 
+                alt="Smart Twigs" 
+                className={`transition-all duration-500 ${isScrolled ? "h-8" : "h-10"}`}
+              />
+            ) : (
+              <span className="font-display text-xl tracking-tight">Smart Twigs</span>
+            )}
           </a>
 
           {/* Desktop Navigation */}
