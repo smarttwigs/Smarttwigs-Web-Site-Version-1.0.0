@@ -4,32 +4,32 @@ import { useEffect, useState } from "react";
 
 const testimonials = [
   {
-    quote: "Optimus transformed our deployment pipeline. What used to take hours now happens in seconds.",
-    author: "Sarah Chen",
-    role: "CTO",
-    company: "Meridian Labs",
-    metric: "10x faster deployments",
+    quote: "Smart Twigs delivered a comprehensive data analytics platform that transformed our decision-making process entirely.",
+    author: "Michael Torres",
+    role: "Chief Data Officer",
+    company: "Global Finance Corp",
+    metric: "3x faster insights",
   },
   {
-    quote: "The developer experience is unmatched. Our team's productivity has never been higher.",
-    author: "Marcus Webb",
-    role: "Engineering Lead",
-    company: "Flux Systems",
-    metric: "40% more features shipped",
+    quote: "Their team integrated our legacy systems with modern cloud infrastructure seamlessly. Exceptional technical expertise.",
+    author: "Jennifer Walsh",
+    role: "VP of Technology",
+    company: "Healthcare Solutions",
+    metric: "Zero downtime migration",
   },
   {
-    quote: "Finally, infrastructure that scales with our ambition. Zero downtime since we switched.",
-    author: "Elena Rodriguez",
-    role: "VP Engineering",
-    company: "Beacon AI",
-    metric: "99.99% uptime",
+    quote: "The AI solution they built has automated 60% of our manual processes. A true technology partner.",
+    author: "David Kim",
+    role: "Director of Operations",
+    company: "Retail Dynamics",
+    metric: "60% process automation",
   },
   {
-    quote: "The integrations are seamless. We connected our entire stack in a single afternoon.",
-    author: "James Liu",
-    role: "Founder",
-    company: "Prism Analytics",
-    metric: "50+ integrations used",
+    quote: "From concept to production, Smart Twigs guided us through every step of our digital transformation journey.",
+    author: "Amanda Foster",
+    role: "CEO",
+    company: "Innovation Labs",
+    metric: "Full digital transformation",
   },
 ];
 
@@ -56,7 +56,7 @@ export function TestimonialsSection() {
         {/* Section Label */}
         <div className="flex items-center gap-4 mb-16">
           <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
-            What people say
+            Client Success Stories
           </span>
           <div className="flex-1 h-px bg-foreground/10" />
           <span className="font-mono text-xs text-muted-foreground">
@@ -138,7 +138,7 @@ export function TestimonialsSection() {
         {/* Company Logos Marquee Label */}
         <div className="mt-24 pt-12 border-t border-foreground/10">
           <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase mb-8 text-center">
-            Trusted by forward-thinking teams
+            Trusted by industry leaders worldwide
           </p>
         </div>
       </div>
@@ -148,7 +148,7 @@ export function TestimonialsSection() {
         <div className="flex gap-16 items-center marquee">
           {[...Array(2)].map((_, setIdx) => (
             <div key={setIdx} className="flex gap-16 items-center shrink-0">
-              {["Meridian Labs", "Flux Systems", "Beacon AI", "Prism Analytics", "Nova Tech", "Quantum Corp", "Atlas Digital", "Vertex Labs"].map(
+              {["Global Finance Corp", "Healthcare Solutions", "Retail Dynamics", "Innovation Labs", "Tech Ventures", "Data Systems Inc", "Enterprise Solutions", "Digital Networks"].map(
                 (company) => (
                   <span
                     key={`${setIdx}-${company}`}

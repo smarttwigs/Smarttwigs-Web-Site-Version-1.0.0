@@ -4,48 +4,48 @@ import { ArrowRight, Check } from "lucide-react";
 
 const services = [
   {
-    name: "Consulting",
-    description: "Strategic technology consulting",
+    name: "Data & Analytics",
+    description: "Extract insights and drive decisions",
     price: { monthly: null, annual: null },
     features: [
-      "Business analysis",
-      "Technology assessment",
-      "Digital strategy",
-      "Process optimization",
-      "Technical roadmap",
+      "Data science consulting",
+      "Machine learning solutions",
+      "Business intelligence",
+      "Predictive analytics",
+      "Data visualization",
     ],
-    cta: "Get started",
+    cta: "Learn more",
     popular: false,
   },
   {
-    name: "Development",
-    description: "Full-stack software development",
+    name: "Software Development",
+    description: "Custom solutions for your business",
     price: { monthly: null, annual: null },
     features: [
-      "Custom applications",
+      "Custom web applications",
+      "Mobile app development",
       "System integrations",
-      "Cloud solutions",
-      "Mobile development",
+      "Cloud migrations",
       "API development",
-      "Data pipelines",
-      "AI/ML solutions",
+      "Legacy modernization",
+      "Security implementation",
     ],
     cta: "Get in touch",
     popular: true,
   },
   {
-    name: "Enterprise",
-    description: "Complete digital transformation",
+    name: "Digital Transformation",
+    description: "End-to-end business evolution",
     price: { monthly: null, annual: null },
     features: [
-      "Everything included",
-      "Dedicated team",
-      "24/7 support",
-      "On-site consulting",
-      "Security audit",
-      "Custom SLA",
-      "Training programs",
-      "Ongoing maintenance",
+      "Full technology audit",
+      "Strategic roadmapping",
+      "Process automation",
+      "Change management",
+      "Technical leadership",
+      "Ongoing partnership",
+      "Training & enablement",
+      "24/7 dedicated support",
     ],
     cta: "Contact us",
     popular: false,
@@ -59,15 +59,15 @@ export function PricingSection() {
         {/* Header */}
         <div className="max-w-3xl mb-20">
           <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase block mb-6">
-            Services
+            Our Services
           </span>
           <h2 className="font-display text-5xl md:text-6xl lg:text-7xl tracking-tight text-foreground mb-6">
-            Tailored solutions
+            Complete solutions
             <br />
-            <span className="text-stroke">for your needs</span>
+            <span className="text-stroke">from A to Z</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl">
-            From consulting to full digital transformation. Let us help you scale.
+            From conception and development to integration and ongoing support. We provide comprehensive technology services tailored to your business needs.
           </p>
         </div>
 

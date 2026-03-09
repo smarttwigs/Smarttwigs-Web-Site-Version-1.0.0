@@ -52,14 +52,14 @@ export function CtaSection() {
               {/* Left content */}
               <div className="flex-1">
                 <h2 className="text-4xl lg:text-7xl font-display tracking-tight mb-8 leading-[0.95]">
-                  Ready to scale your
+                  Ready to transform
                   <br />
-                  digital business?
+                  your business?
                 </h2>
 
                 <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
-                  Partner with Smart Twigs to transform your data and technology. 
-                  Let&apos;s create value together.
+                  Partner with Smart Twigs to unlock the full potential of your data and technology. 
+                  Let&apos;s create value through innovation together.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
@@ -67,7 +67,7 @@ export function CtaSection() {
                     size="lg"
                     className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
                   >
-                    Get in touch
+                    Schedule a consultation
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </Button>
                   <Button
@@ -75,12 +75,12 @@ export function CtaSection() {
                     variant="outline"
                     className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
                   >
-                    View our work
+                    Explore our services
                   </Button>
                 </div>
 
                 <p className="text-sm text-muted-foreground mt-8 font-mono">
-                  Free consultation available
+                  No commitment required - let&apos;s discuss your project
                 </p>
               </div>
 

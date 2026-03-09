@@ -5,27 +5,28 @@ import { AnimatedWave } from "./animated-wave";
 
 const footerLinks = {
   Services: [
-    { name: "Data Science", href: "#features" },
-    { name: "System Integration", href: "#features" },
-    { name: "Cloud Solutions", href: "#features" },
-    { name: "Security", href: "#features" },
+    { name: "Data Science & A.I.", href: "#features" },
+    { name: "System Integrations", href: "#features" },
+    { name: "Mobile & Cloud Apps", href: "#features" },
+    { name: "Security Management", href: "#features" },
+    { name: "Product Development", href: "#features" },
   ],
   Industries: [
     { name: "Information Technology", href: "#developers" },
     { name: "Financial Services", href: "#developers" },
     { name: "Healthcare", href: "#developers" },
-    { name: "Retail", href: "#developers" },
+    { name: "Retail & E-commerce", href: "#developers" },
   ],
   Company: [
     { name: "About Us", href: "#" },
-    { name: "Case Studies", href: "#" },
+    { name: "Our Process", href: "#how-it-works" },
     { name: "Careers", href: "#", badge: "Hiring" },
     { name: "Contact", href: "#pricing" },
   ],
   Legal: [
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
-    { name: "Security", href: "#" },
+    { name: "Privacy Policy", href: "#" },
+    { name: "Terms of Service", href: "#" },
+    { name: "Cookie Policy", href: "#" },
   ],
 };
 
@@ -53,7 +54,7 @@ export function FooterSection() {
               </a>
 
               <p className="text-muted-foreground leading-relaxed mb-8 max-w-xs">
-                Smart Twigs Consultancy Group: Value through Data && Technology. Transforming businesses with innovative digital solutions.
+                Smart Twigs is made up of innovative technology specialists offering comprehensive digital solutions and professional services worldwide.
               </p>
 
               {/* Social Links */}

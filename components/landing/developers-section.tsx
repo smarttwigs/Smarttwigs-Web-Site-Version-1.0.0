@@ -7,28 +7,49 @@ const industries = [
   {
     label: "IT",
     code: `// Information Technology
-smarttwigs.expertise({
-  domain: 'enterprise-software',
-  solutions: ['cloud', 'devops', 'ai'],
-  scale: 'global'
+smarttwigs.solution({
+  area: 'enterprise-systems',
+  services: [
+    'software-development',
+    'cloud-migration',
+    'system-integration'
+  ]
 })`,
   },
   {
     label: "Finance",
-    code: `// Financial Systems
-smarttwigs.expertise({
-  domain: 'fintech',
-  solutions: ['trading', 'risk', 'compliance'],
-  security: 'bank-grade'
+    code: `// Financial Services
+smarttwigs.solution({
+  area: 'fintech',
+  services: [
+    'risk-analytics',
+    'trading-systems',
+    'compliance-automation'
+  ]
 })`,
   },
   {
     label: "Healthcare",
-    code: `// Healthcare Systems
-smarttwigs.expertise({
-  domain: 'healthtech',
-  solutions: ['ehr', 'analytics', 'telemedicine'],
-  compliance: 'hipaa'
+    code: `// Healthcare & Life Sciences
+smarttwigs.solution({
+  area: 'healthtech',
+  services: [
+    'data-analytics',
+    'patient-systems',
+    'research-platforms'
+  ]
+})`,
+  },
+  {
+    label: "Retail",
+    code: `// Retail & E-commerce
+smarttwigs.solution({
+  area: 'retail-tech',
+  services: [
+    'inventory-systems',
+    'customer-analytics',
+    'digital-commerce'
+  ]
 })`,
   },
 ];
@@ -36,19 +57,19 @@ smarttwigs.expertise({
 const features = [
   { 
     title: "Product Development", 
-    description: "From concept to post-production delivery."
+    description: "Manage and oversee development from concept to post-production."
   },
   { 
     title: "Technical Management", 
-    description: "Integrated communication strategies."
+    description: "Integrate broad communication strategies into corporate processes."
   },
   { 
     title: "Retail Optimization", 
-    description: "Drive efficiency and maximize ROI."
+    description: "Drive efficiency and maximize ROI across retail operations."
   },
   { 
     title: "Marketing & Ads", 
-    description: "Data-driven marketing solutions."
+    description: "Leverage data-driven insights for targeted marketing campaigns."
   },
 ];
 
