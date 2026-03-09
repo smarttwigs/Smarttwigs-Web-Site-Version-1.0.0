@@ -71,12 +71,12 @@ export function HeroSection() {
         {/* Main headline */}
         <div className="mb-12">
           <h1 
-            className={`text-[clamp(3rem,12vw,10rem)] font-display leading-[0.9] tracking-tight transition-all duration-1000 ${
+            className={`text-[clamp(2.5rem,9vw,7rem)] font-display leading-[0.95] tracking-tight transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
             <span className="block">Value through</span>
-            <span className="block">
+            <span className="block whitespace-nowrap">
               Data &{" "}
               <span className="relative inline-block">
                 <span 

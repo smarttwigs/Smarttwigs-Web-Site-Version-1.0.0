@@ -54,7 +54,7 @@ const services = [
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="relative py-32 lg:py-40 border-t border-foreground/10">
+    <section id="pricing" className="relative py-16 lg:py-24 border-t border-foreground/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="max-w-3xl mb-20">
