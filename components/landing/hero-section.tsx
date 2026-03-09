@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { AnimatedSphere } from "./animated-sphere";
 
-const words = ["transform", "innovate", "integrate", "scale"];
+const words = ["Technology", "Innovation", "Solutions", "Results"];
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -108,8 +108,8 @@ export function HeroSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            We connect strategy and execution, helping our clients strengthen their core technology, 
-            scale with flexibility and create seamless digital experiences.
+            Smarttwigs is made up of innovative technology specialists offering comprehensive digital solutions. 
+            We create value by transforming entire data and product portfolios with cutting-edge technology.
           </p>
           
           {/* CTAs */}
@@ -147,10 +147,10 @@ export function HeroSection() {
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-16">
               {[
-                { value: "200+", label: "projects delivered", company: "GLOBAL" },
-                { value: "98%", label: "client satisfaction", company: "ENTERPRISE" },
-                { value: "50+", label: "expert consultants", company: "TEAM" },
-                { value: "15+", label: "years experience", company: "INDUSTRY" },
+                { value: "Global", label: "software consultancy", company: "REACH" },
+                { value: "Full", label: "digital solutions", company: "SUITE" },
+                { value: "24/7", label: "dedicated support", company: "SERVICE" },
+                { value: "100%", label: "client focused", company: "APPROACH" },
               ].map((stat) => (
                 <div key={`${stat.company}-${i}`} className="flex items-baseline gap-4">
                   <span className="text-4xl lg:text-5xl font-display">{stat.value}</span>

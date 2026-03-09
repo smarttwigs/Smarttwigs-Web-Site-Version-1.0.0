@@ -5,27 +5,39 @@ import { useEffect, useRef, useState } from "react";
 const features = [
   {
     number: "01",
-    title: "Data Science & A.I.",
-    description: "Our leading data scientists extract insights and machine learning solutions to improve your services and decision-making processes.",
+    title: "Data Science and A.I. Development",
+    description: "Our leading data scientists extract any insights and learning to improve our clients' services and decision-making processes.",
     visual: "ai",
   },
   {
     number: "02",
     title: "System Integrations",
-    description: "We leverage existing technologies to scale your operations, connecting disparate systems into seamless workflows.",
+    description: "We leverage any existing technologies available to scale your operations, connecting disparate systems into seamless workflows.",
     visual: "deploy",
   },
   {
     number: "03",
     title: "Mobile & Cloud Applications",
-    description: "Our teams are focused on keeping your business relevant with cutting-edge mobile and cloud solutions.",
+    description: "Our teams are focused on keeping our clients relevant to the ever evolving tech landscape with cutting-edge solutions.",
     visual: "collab",
   },
   {
     number: "04",
-    title: "Security Management",
-    description: "Leading security experts from the largest institutions lower cyber risk and protect your digital assets.",
+    title: "Security Management & Development",
+    description: "Leading security experts from the largest institutions in the world lower cyber risk to your company.",
     visual: "security",
+  },
+  {
+    number: "05",
+    title: "Technical Management",
+    description: "We will integrate broad communication strategies into your corporate processes for seamless operations.",
+    visual: "collab",
+  },
+  {
+    number: "06",
+    title: "Product Development",
+    description: "We'll manage and oversee the development of products from concept to post-production delivery.",
+    visual: "deploy",
   },
 ];
 
@@ -336,10 +348,14 @@ export function FeaturesSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Comprehensive solutions.
+            Consulting services &
             <br />
-            <span className="text-muted-foreground">Cutting-edge technology.</span>
+            <span className="text-muted-foreground">technical solutions.</span>
           </h2>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
+            We provide complete solutions - from conception, specification, development and integration 
+            to interdisciplinary consulting services in a high-tech, industry-wide environment.
+          </p>
         </div>
 
         {/* Features List */}
