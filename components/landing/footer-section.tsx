@@ -5,28 +5,27 @@ import { AnimatedWave } from "./animated-wave";
 
 const footerLinks = {
   Services: [
-    { name: "Data Science & A.I.", href: "#features" },
-    { name: "System Integrations", href: "#features" },
-    { name: "Mobile & Cloud Apps", href: "#features" },
-    { name: "Security Management", href: "#features" },
-    { name: "Product Development", href: "#features" },
+    { name: "Data & Analytics Platforms", href: "#features" },
+    { name: "AI / ML Engineering", href: "#features" },
+    { name: "Cloud & Platform Engineering", href: "#features" },
+    { name: "Security & Governance", href: "#features" },
   ],
-  Industries: [
-    { name: "Information Technology", href: "#developers" },
-    { name: "Financial Services", href: "#developers" },
-    { name: "Healthcare", href: "#developers" },
-    { name: "Retail & E-commerce", href: "#developers" },
+  Delivery: [
+    { name: "NearShore LATAM", href: "#delivery" },
+    { name: "OffShore Europe/Asia", href: "#delivery" },
+    { name: "Dedicated Pods", href: "#delivery" },
+    { name: "Staff Augmentation", href: "#delivery" },
+  ],
+  Compliance: [
+    { name: "Security Overview", href: "#compliance" },
+    { name: "Compliance Deliverables", href: "#compliance" },
+    { name: "Vendor Onboarding", href: "#pricing" },
+    { name: "Architecture Reviews", href: "#pricing" },
   ],
   Company: [
     { name: "About Us", href: "#" },
-    { name: "Our Process", href: "#how-it-works" },
-    { name: "Careers", href: "#", badge: "Hiring" },
     { name: "Contact", href: "#pricing" },
-  ],
-  Legal: [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
-    { name: "Cookie Policy", href: "#" },
+    { name: "Careers", href: "#", badge: "Hiring" },
   ],
 };
 
@@ -53,8 +52,11 @@ export function FooterSection() {
                 <img src="/logo.png" alt="Smart Twigs" className="h-12" />
               </a>
 
-              <p className="text-muted-foreground leading-relaxed mb-8 max-w-xs">
-                Smart Twigs is made up of innovative technology specialists offering comprehensive digital solutions and professional services worldwide.
+              <p className="text-muted-foreground leading-relaxed mb-6 max-w-xs">
+                Enterprise AI & Data Platform Engineering. Global delivery with enterprise controls.
+              </p>
+              <p className="text-sm text-muted-foreground mb-8 max-w-xs border-l-2 border-foreground/20 pl-4">
+                We support vendor onboarding, security questionnaires, and architecture reviews.
               </p>
 
               {/* Social Links */}

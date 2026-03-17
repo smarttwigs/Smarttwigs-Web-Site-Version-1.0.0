@@ -5,39 +5,27 @@ import { useEffect, useRef, useState } from "react";
 const features = [
   {
     number: "01",
-    title: "Data Science and A.I. Development",
-    description: "Our leading data scientists extract any insights and learning to improve our clients' services and decision-making processes.",
-    visual: "ai",
-  },
-  {
-    number: "02",
-    title: "System Integrations",
-    description: "We leverage any existing technologies available to scale your operations, connecting disparate systems into seamless workflows.",
+    title: "Data & Analytics Platforms",
+    description: "Modern lakehouse and warehouse architectures, real-time streaming pipelines, orchestration frameworks, and data quality engineering for governed, reliable data at scale.",
     visual: "deploy",
   },
   {
+    number: "02",
+    title: "AI / ML Engineering",
+    description: "End-to-end MLOps pipelines, LLM evaluation and fine-tuning, model monitoring, inference optimization, and AI governance frameworks for production-ready ML systems.",
+    visual: "ai",
+  },
+  {
     number: "03",
-    title: "Mobile & Cloud Applications",
-    description: "Our teams are focused on keeping our clients relevant to the ever evolving tech landscape with cutting-edge solutions.",
+    title: "Cloud & Platform Engineering",
+    description: "Infrastructure as Code (IaC), CI/CD automation, observability stacks, reliability engineering, and FinOps practices for cost-efficient cloud operations.",
     visual: "collab",
   },
   {
     number: "04",
-    title: "Security Management & Development",
-    description: "Leading security experts from the largest institutions in the world lower cyber risk to your company.",
+    title: "Security & Governance",
+    description: "Data classification, access controls (RBAC/ABAC), audit trails, lineage tracking, and compliance-ready architectures aligned with enterprise security standards.",
     visual: "security",
-  },
-  {
-    number: "05",
-    title: "Technical Management",
-    description: "We will integrate broad communication strategies into your corporate processes for seamless operations.",
-    visual: "collab",
-  },
-  {
-    number: "06",
-    title: "Product Development",
-    description: "We'll manage and oversee the development of products from concept to post-production delivery.",
-    visual: "deploy",
   },
 ];
 
@@ -341,20 +329,20 @@ export function FeaturesSection() {
         <div className="mb-16 lg:mb-24">
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
             <span className="w-8 h-px bg-foreground/30" />
-            Competence Areas
+            Platform Engineering
           </span>
           <h2
             className={`text-4xl lg:text-6xl font-display tracking-tight transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Consulting services &
+            Enterprise-grade platforms
             <br />
-            <span className="text-muted-foreground">technical solutions.</span>
+            <span className="text-muted-foreground">built for production.</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-            We provide complete solutions - from conception, specification, development and integration 
-            to interdisciplinary consulting services in a high-tech, industry-wide environment.
+            We deliver modern data and AI platforms with the governance, reliability, and security 
+            that enterprise environments demand — from architecture through operationalization.
           </p>
         </div>
 

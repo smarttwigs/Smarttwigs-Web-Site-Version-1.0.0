@@ -1,86 +1,34 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { TrendingUp, Shield, DollarSign, Clock } from "lucide-react";
 
-function AnimatedCounter({ end, suffix = "", prefix = "" }: { end: number; suffix?: string; prefix?: string }) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
-  const [hasAnimated, setHasAnimated] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
-          let start = 0;
-          const duration = 2000;
-          const startTime = performance.now();
-
-          const animate = (currentTime: number) => {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            setCount(Math.floor(eased * end));
-
-            if (progress < 1) {
-              requestAnimationFrame(animate);
-            }
-          };
-
-          requestAnimationFrame(animate);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [end, hasAnimated]);
-
-  return (
-    <div ref={ref} className="text-6xl lg:text-8xl font-display tracking-tight">
-      {prefix}{count.toLocaleString()}{suffix}
-    </div>
-  );
-}
-
-const metrics = [
+const outcomes = [
   { 
-    value: 250, 
-    suffix: "+", 
-    prefix: "",
-    label: "Projects delivered worldwide",
+    icon: Clock,
+    title: "Faster release cadence",
+    description: "Accelerated data/ML pipeline deployments with automated CI/CD and governed releases",
   },
   { 
-    value: 98, 
-    suffix: "%", 
-    prefix: "",
-    label: "Client satisfaction rate",
+    icon: Shield,
+    title: "Improved auditability",
+    description: "Governed access to data with full lineage, logging, and compliance documentation",
   },
   { 
-    value: 50, 
-    suffix: "+", 
-    prefix: "",
-    label: "Technology specialists",
+    icon: DollarSign,
+    title: "Reduced compute waste",
+    description: "FinOps guardrails and cost optimization strategies for cloud infrastructure",
   },
   { 
-    value: 15, 
-    suffix: "+", 
-    prefix: "",
-    label: "Years of industry experience",
+    icon: TrendingUp,
+    title: "Production-ready ML",
+    description: "MLOps frameworks that take models from experimentation to reliable production systems",
   },
 ];
 
 export function MetricsSection() {
-  const [time, setTime] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    setTime(new Date().toLocaleTimeString());
-    const interval = setInterval(() => setTime(new Date().toLocaleTimeString()), 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -95,51 +43,45 @@ export function MetricsSection() {
   }, []);
 
   return (
-    <section id="studio" ref={sectionRef} className="relative py-16 lg:py-24 border-y border-foreground/10">
+    <section id="outcomes" ref={sectionRef} className="relative py-16 lg:py-24 border-y border-foreground/10">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16 lg:mb-24">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
           <div>
             <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
               <span className="w-8 h-px bg-foreground/30" />
-              Our Impact
+              Typical Outcomes
             </span>
             <h2
               className={`text-4xl lg:text-6xl font-display tracking-tight transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              Results that
+              Measurable impact
               <br />
-              speak for themselves.
+              <span className="text-muted-foreground">for enterprise clients.</span>
             </h2>
           </div>
-          <div className="flex items-center gap-4 font-mono text-sm text-muted-foreground">
-            <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              Active
-            </span>
-            <span className="text-foreground/30">|</span>
-            <span>{time ?? "--:--:--"}</span>
-          </div>
+          <p className="text-muted-foreground max-w-md">
+            Our engagements consistently deliver improvements across delivery speed, governance, and cost efficiency.
+          </p>
         </div>
         
-        {/* Metrics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-foreground/10">
-          {metrics.map((metric, index) => (
+        {/* Outcomes Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {outcomes.map((outcome, index) => (
             <div
-              key={metric.label}
-              className={`bg-background p-8 lg:p-12 transition-all duration-700 ${
+              key={outcome.title}
+              className={`p-8 lg:p-10 border border-foreground/10 rounded-lg bg-foreground/[0.01] transition-all duration-700 hover:border-foreground/20 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <AnimatedCounter 
-                end={typeof metric.value === 'number' ? metric.value : 0} 
-                suffix={metric.suffix} 
-                prefix={metric.prefix}
-              />
-              <div className="mt-4 text-lg text-muted-foreground">{metric.label}</div>
+              <div className="w-12 h-12 rounded-lg bg-foreground/5 flex items-center justify-center mb-6">
+                <outcome.icon className="w-6 h-6 text-foreground" />
+              </div>
+              <h3 className="text-2xl lg:text-3xl font-display mb-3">{outcome.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{outcome.description}</p>
             </div>
           ))}
         </div>

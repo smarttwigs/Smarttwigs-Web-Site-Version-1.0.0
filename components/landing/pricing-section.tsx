@@ -2,54 +2,58 @@
 
 import { ArrowRight, Check } from "lucide-react";
 
-const services = [
+const engagementTypes = [
   {
-    name: "Data & Analytics",
-    description: "Extract insights and drive decisions",
-    price: { monthly: null, annual: null },
+    name: "Platform Assessment",
+    description: "Evaluate your current data/AI infrastructure",
     features: [
-      "Data science consulting",
-      "Machine learning solutions",
-      "Business intelligence",
-      "Predictive analytics",
-      "Data visualization",
+      "Architecture review",
+      "Security posture assessment",
+      "Performance analysis",
+      "Compliance gap analysis",
+      "Actionable roadmap",
     ],
-    cta: "Learn more",
+    cta: "Request Assessment",
     popular: false,
   },
   {
-    name: "Software Development",
-    description: "Custom solutions for your business",
-    price: { monthly: null, annual: null },
+    name: "Capability Deck",
+    description: "Detailed overview of our services and approach",
     features: [
-      "Custom web applications",
-      "Mobile app development",
-      "System integrations",
-      "Cloud migrations",
-      "API development",
-      "Legacy modernization",
-      "Security implementation",
+      "Full service portfolio",
+      "Case study summaries",
+      "Delivery model options",
+      "Compliance documentation",
+      "Team structure & expertise",
+      "Engagement process",
+      "Reference architecture samples",
     ],
-    cta: "Get in touch",
+    cta: "Request Capability Deck",
     popular: true,
   },
   {
-    name: "Digital Transformation",
-    description: "End-to-end business evolution",
-    price: { monthly: null, annual: null },
+    name: "Vendor Onboarding",
+    description: "We support your procurement process",
     features: [
-      "Full technology audit",
-      "Strategic roadmapping",
-      "Process automation",
-      "Change management",
-      "Technical leadership",
-      "Ongoing partnership",
-      "Training & enablement",
-      "24/7 dedicated support",
+      "Security questionnaire completion",
+      "Architecture review sessions",
+      "Compliance documentation",
+      "Reference calls (anonymized)",
+      "SOW/MSA negotiation support",
+      "Proof of concept planning",
+      "Team introduction",
+      "Onboarding timeline",
     ],
-    cta: "Contact us",
+    cta: "Start Onboarding",
     popular: false,
   },
+];
+
+const inquiryOptions = [
+  "Compliance review",
+  "Global delivery pods",
+  "Platform assessment",
+  "Capability deck request",
 ];
 
 export function PricingSection() {
@@ -57,54 +61,49 @@ export function PricingSection() {
     <section id="pricing" className="relative py-16 lg:py-24 border-t border-foreground/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
-        <div className="max-w-3xl mb-20">
+        <div className="max-w-3xl mb-16">
           <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase block mb-6">
-            Our Services
+            Get Started
           </span>
           <h2 className="font-display text-5xl md:text-6xl lg:text-7xl tracking-tight text-foreground mb-6">
-            Complete solutions
+            Ready to engage?
             <br />
-            <span className="text-stroke">from A to Z</span>
+            <span className="text-stroke">Let&apos;s talk.</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl">
-            From conception and development to integration and ongoing support. We provide comprehensive technology services tailored to your business needs.
+            Whether you need a platform assessment, want to review our capabilities, or are ready to start vendor onboarding — we make it easy to get started.
           </p>
         </div>
 
         
 
-        {/* Services Cards */}
-        <div className="grid md:grid-cols-3 gap-px bg-foreground/10">
-          {services.map((plan, idx) => (
+        {/* Engagement Cards */}
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
+          {engagementTypes.map((type, idx) => (
             <div
-              key={plan.name}
-              className={`relative p-8 lg:p-12 bg-background ${
-                plan.popular ? "md:-my-4 md:py-12 lg:py-16 border-2 border-foreground" : ""
+              key={type.name}
+              className={`relative p-8 lg:p-10 bg-background border rounded-lg ${
+                type.popular ? "border-2 border-foreground" : "border-foreground/10"
               }`}
             >
-              {plan.popular && (
-                <span className="absolute -top-3 left-8 px-3 py-1 bg-foreground text-primary-foreground text-xs font-mono uppercase tracking-widest">
-                  Most Popular
+              {type.popular && (
+                <span className="absolute -top-3 left-6 px-3 py-1 bg-foreground text-primary-foreground text-xs font-mono uppercase tracking-widest rounded-full">
+                  Recommended
                 </span>
               )}
 
-              {/* Plan Header */}
-              <div className="mb-8">
+              {/* Header */}
+              <div className="mb-6">
                 <span className="font-mono text-xs text-muted-foreground">
                   {String(idx + 1).padStart(2, "0")}
                 </span>
-                <h3 className="font-display text-3xl text-foreground mt-2">{plan.name}</h3>
-                <p className="text-sm text-muted-foreground mt-2">{plan.description}</p>
-              </div>
-
-              {/* Price */}
-              <div className="mb-8 pb-8 border-b border-foreground/10">
-                <span className="font-display text-4xl text-foreground">Custom</span>
+                <h3 className="font-display text-2xl text-foreground mt-2">{type.name}</h3>
+                <p className="text-sm text-muted-foreground mt-2">{type.description}</p>
               </div>
 
               {/* Features */}
-              <ul className="space-y-4 mb-10">
-                {plan.features.map((feature) => (
+              <ul className="space-y-3 mb-8">
+                {type.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-foreground mt-0.5 shrink-0" />
                     <span className="text-sm text-muted-foreground">{feature}</span>
@@ -114,24 +113,42 @@ export function PricingSection() {
 
               {/* CTA */}
               <button
-                className={`w-full py-4 flex items-center justify-center gap-2 text-sm font-medium transition-all group ${
-                  plan.popular
+                className={`w-full py-3 flex items-center justify-center gap-2 text-sm font-medium transition-all group rounded-full ${
+                  type.popular
                     ? "bg-foreground text-primary-foreground hover:bg-foreground/90"
                     : "border border-foreground/20 text-foreground hover:border-foreground hover:bg-foreground/5"
                 }`}
               >
-                {plan.cta}
+                {type.cta}
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
             </div>
           ))}
         </div>
 
+        {/* Inquiry Options */}
+        <div className="p-8 border border-foreground/10 rounded-lg bg-foreground/[0.01]">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+            <div>
+              <h3 className="font-display text-xl mb-2">What are you interested in?</h3>
+              <p className="text-sm text-muted-foreground">Select all that apply and we&apos;ll tailor our response.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {inquiryOptions.map((option) => (
+                <label key={option} className="flex items-center gap-2 px-4 py-2 border border-foreground/10 rounded-full cursor-pointer hover:border-foreground/30 transition-colors">
+                  <input type="checkbox" className="w-4 h-4 accent-foreground" />
+                  <span className="text-sm">{option}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Note */}
-        <p className="mt-12 text-center text-sm text-muted-foreground">
-          All engagements include dedicated project management and ongoing support.{" "}
-          <a href="#" className="underline underline-offset-4 hover:text-foreground transition-colors">
-            Learn more about our approach
+        <p className="mt-8 text-center text-sm text-muted-foreground">
+          We can support vendor onboarding and security reviews.{" "}
+          <a href="#compliance" className="underline underline-offset-4 hover:text-foreground transition-colors">
+            View our compliance deliverables
           </a>
         </p>
       </div>

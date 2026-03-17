@@ -4,33 +4,42 @@ import { useEffect, useState } from "react";
 
 const testimonials = [
   {
-    quote: "Smart Twigs delivered a comprehensive data analytics platform that transformed our decision-making process entirely.",
-    author: "Michael Torres",
-    role: "Chief Data Officer",
-    company: "Global Finance Corp",
-    metric: "3x faster insights",
+    quote: "Their team delivered a governed data platform that passed our security review on first submission. Rare for external vendors.",
+    author: "VP of Data Engineering",
+    role: "Anonymized",
+    company: "Top-10 Global Bank",
+    metric: "First-pass security approval",
   },
   {
-    quote: "Their team integrated our legacy systems with modern cloud infrastructure seamlessly. Exceptional technical expertise.",
-    author: "Jennifer Walsh",
-    role: "VP of Technology",
-    company: "Healthcare Solutions",
-    metric: "Zero downtime migration",
+    quote: "The MLOps framework they implemented took our models from quarterly releases to weekly deployments with full auditability.",
+    author: "Chief Analytics Officer",
+    role: "Anonymized",
+    company: "Fortune 100 Retailer",
+    metric: "Faster ML release cadence",
   },
   {
-    quote: "The AI solution they built has automated 60% of our manual processes. A true technology partner.",
-    author: "David Kim",
-    role: "Director of Operations",
-    company: "Retail Dynamics",
-    metric: "60% process automation",
+    quote: "Follow-the-sun delivery with their global pods meant we never lost momentum. Enterprise controls without enterprise overhead.",
+    author: "Director of Platform Engineering",
+    role: "Anonymized",
+    company: "Global Insurance Company",
+    metric: "24/7 delivery coverage",
   },
   {
-    quote: "From concept to production, Smart Twigs guided us through every step of our digital transformation journey.",
-    author: "Amanda Foster",
-    role: "CEO",
-    company: "Innovation Labs",
-    metric: "Full digital transformation",
+    quote: "They understood our compliance requirements from day one. Documentation, access controls, lineage — all production-ready.",
+    author: "CISO",
+    role: "Anonymized",
+    company: "Healthcare Network",
+    metric: "Compliance-ready delivery",
   },
+];
+
+const selectedExperience = [
+  "Top-10 Bank",
+  "Global Insurer", 
+  "Fortune 100 Retailer",
+  "Healthcare Network",
+  "Fintech Unicorn",
+  "Enterprise SaaS",
 ];
 
 export function TestimonialsSection() {
@@ -135,31 +144,21 @@ export function TestimonialsSection() {
           </div>
         </div>
 
-        {/* Company Logos Marquee Label */}
-        <div className="mt-24 pt-12 border-t border-foreground/10">
-          <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase mb-8 text-center">
-            Trusted by industry leaders worldwide
+        {/* Selected Experience */}
+        <div className="mt-16 pt-12 border-t border-foreground/10">
+          <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase mb-6 text-center">
+            Selected Experience (Anonymized)
           </p>
-        </div>
-      </div>
-      
-      {/* Full-width marquee outside container */}
-      <div className="w-full">
-        <div className="flex gap-16 items-center marquee">
-          {[...Array(2)].map((_, setIdx) => (
-            <div key={setIdx} className="flex gap-16 items-center shrink-0">
-              {["Global Finance Corp", "Healthcare Solutions", "Retail Dynamics", "Innovation Labs", "Tech Ventures", "Data Systems Inc", "Enterprise Solutions", "Digital Networks"].map(
-                (company) => (
-                  <span
-                    key={`${setIdx}-${company}`}
-                    className="font-display text-xl md:text-2xl text-foreground/30 whitespace-nowrap hover:text-foreground transition-colors duration-300"
-                  >
-                    {company}
-                  </span>
-                )
-              )}
-            </div>
-          ))}
+          <div className="flex flex-wrap justify-center gap-3">
+            {selectedExperience.map((exp) => (
+              <span
+                key={exp}
+                className="px-4 py-2 text-sm font-mono text-foreground/70 bg-foreground/5 rounded-full border border-foreground/10"
+              >
+                {exp}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

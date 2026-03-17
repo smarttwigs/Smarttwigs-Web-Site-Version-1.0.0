@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Shield, Globe, Layers } from "lucide-react";
 import { AnimatedSphere } from "./animated-sphere";
 
-const words = ["Technology", "Innovation", "Solutions", "Results"];
+const words = ["Scale", "Comply", "Deliver", "Govern"];
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -64,20 +64,20 @@ export function HeroSection() {
         >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground">
             <span className="w-8 h-px bg-foreground/30" />
-            Data & Software Enterprise Services
+            Enterprise AI & Data Platform Engineering
           </span>
         </div>
         
         {/* Main headline */}
         <div className="mb-12">
           <h1 
-            className={`text-[clamp(2.5rem,9vw,7rem)] font-display leading-[0.95] tracking-tight transition-all duration-1000 ${
+            className={`text-[clamp(2.2rem,7vw,5.5rem)] font-display leading-[0.95] tracking-tight transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="block">Value through</span>
+            <span className="block">Enterprise AI & Data Platforms</span>
             <span className="block whitespace-nowrap">
-              Data &{" "}
+              Built to{" "}
               <span className="relative inline-block">
                 <span 
                   key={wordIndex}
@@ -108,8 +108,8 @@ export function HeroSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Smarttwigs is made up of innovative technology specialists offering comprehensive digital solutions. 
-            We create value by transforming entire data and product portfolios with cutting-edge technology.
+            We design and deliver modern data platforms, ML/LLM systems, and governed analytics that meet 
+            enterprise standards for security, compliance, reliability, and cost control.
           </p>
           
           {/* CTAs */}
@@ -129,9 +129,30 @@ export function HeroSection() {
               size="lg" 
               variant="outline" 
               className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
+              onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Our Services
+              Request Capability Deck
             </Button>
+          </div>
+        </div>
+        
+        {/* Trust Row */}
+        <div 
+          className={`mt-12 flex flex-wrap items-center gap-8 transition-all duration-700 delay-400 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <Shield className="w-4 h-4" />
+            <span>Security-first delivery</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <Globe className="w-4 h-4" />
+            <span>Global delivery pods</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <Layers className="w-4 h-4" />
+            <span>Platform engineering depth</span>
           </div>
         </div>
         
@@ -147,10 +168,10 @@ export function HeroSection() {
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-16">
               {[
-                { value: "Global", label: "software consultancy", company: "REACH" },
-                { value: "Full", label: "digital solutions", company: "SUITE" },
-                { value: "24/7", label: "dedicated support", company: "SERVICE" },
-                { value: "100%", label: "client focused", company: "APPROACH" },
+                { value: "NearShore", label: "LATAM delivery", company: "US OVERLAP" },
+                { value: "OffShore", label: "Europe & Asia", company: "24/7 COVERAGE" },
+                { value: "MLOps", label: "AI/ML systems", company: "ENTERPRISE" },
+                { value: "Governed", label: "data platforms", company: "COMPLIANT" },
               ].map((stat) => (
                 <div key={`${stat.company}-${i}`} className="flex items-baseline gap-4">
                   <span className="text-4xl lg:text-5xl font-display">{stat.value}</span>

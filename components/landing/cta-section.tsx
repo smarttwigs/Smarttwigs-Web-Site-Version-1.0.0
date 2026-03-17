@@ -51,15 +51,15 @@ export function CtaSection() {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
               {/* Left content */}
               <div className="flex-1">
-                <h2 className="text-4xl lg:text-7xl font-display tracking-tight mb-8 leading-[0.95]">
-                  Ready to transform
+                <h2 className="text-4xl lg:text-6xl font-display tracking-tight mb-8 leading-[0.95]">
+                  Enterprise-ready.
                   <br />
-                  your business?
+                  Compliance-first.
                 </h2>
 
                 <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
-                  Partner with Smart Twigs to unlock the full potential of your data and technology. 
-                  Let&apos;s create value through innovation together.
+                  We support security questionnaires, architecture reviews, and vendor onboarding documentation.
+                  Let&apos;s start the conversation.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
@@ -67,20 +67,21 @@ export function CtaSection() {
                     size="lg"
                     className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
                   >
-                    Schedule a consultation
+                    Schedule a call
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </Button>
                   <Button
                     size="lg"
                     variant="outline"
                     className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
+                    onClick={() => document.getElementById('compliance')?.scrollIntoView({ behavior: 'smooth' })}
                   >
-                    Explore our services
+                    View compliance overview
                   </Button>
                 </div>
 
                 <p className="text-sm text-muted-foreground mt-8 font-mono">
-                  No commitment required - let&apos;s discuss your project
+                  Global delivery pods available across LATAM, Europe, and Asia
                 </p>
               </div>
 
