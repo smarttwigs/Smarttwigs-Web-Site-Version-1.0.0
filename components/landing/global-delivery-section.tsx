@@ -6,6 +6,12 @@ import { Globe, Users, Target, Clock, Shield, FileCheck, CheckCircle } from "luc
 
 const regions = [
   {
+    name: "OnShore US",
+    description: "Leading edge experts with proven Product, Engineering and Agentic expertise as Ex-FAANG, Fortune 1000, YC, Ivy Alumni",
+    icon: Target,
+    highlight: "Elite talent",
+  },
+  {
     name: "NearShore LATAM",
     description: "US time-zone overlap, rapid iteration, embedded squads",
     icon: Clock,
@@ -28,17 +34,17 @@ const regions = [
 const operatingModels = [
   {
     title: "Dedicated Pods",
-    description: "Platform / MLOps / Analytics Engineering teams fully embedded in your organization",
+    description: "A small squad that ships weekly — fully embedded in your organization",
     icon: Users,
   },
   {
     title: "Staff Augmentation",
-    description: "Your standards + our talent — seamlessly integrated into your existing teams",
+    description: "Add senior global experts to your team — seamlessly integrated",
     icon: Target,
   },
   {
     title: "Outcome-based Delivery",
-    description: "Milestones + KPIs — we own the delivery and you own the results",
+    description: "Fixed milestones + measurable KPIs — we own delivery, you own results",
     icon: FileCheck,
   },
 ];
@@ -90,13 +96,17 @@ export function GlobalDeliverySection() {
             <span className="text-muted-foreground">Enterprise control.</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground max-w-3xl">
-            NearShore delivery across LATAM and OffShore capacity in Europe and Asia — enabling 
-            follow-the-sun execution without compromising governance.
+            Access a global workforce of senior AI experts and platform engineers — scale up fast 
+            without hiring overhead. NearShore delivery across LATAM and OffShore capacity in Europe 
+            and Asia enable follow-the-sun execution without compromising governance.
+          </p>
+          <p className="mt-3 text-sm text-muted-foreground/80 italic">
+            Flexible month-to-month scaling available.
           </p>
         </div>
 
         {/* Region Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {regions.map((region, index) => (
             <Card
               key={region.name}

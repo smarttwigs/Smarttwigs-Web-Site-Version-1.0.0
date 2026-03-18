@@ -96,9 +96,12 @@ export function ComplianceSection() {
             <span className="text-muted-foreground">and Data delivery.</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground max-w-3xl">
-            We operate with enterprise security expectations from day one and align to your internal 
-            controls and vendor risk requirements. We support security questionnaires, architecture 
-            reviews, and onboarding documentation.
+            We build with enterprise-grade security and governance patterns so you&apos;re ready for bigger 
+            customers, audits, and regulated workflows — without slowing you down. We support security 
+            questionnaires, architecture reviews, and onboarding documentation.
+          </p>
+          <p className="mt-3 text-sm text-muted-foreground/80 italic">
+            Start lightweight, upgrade controls as you scale.
           </p>
         </div>
 

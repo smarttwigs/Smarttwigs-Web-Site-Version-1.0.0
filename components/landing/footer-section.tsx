@@ -5,12 +5,14 @@ import { AnimatedWave } from "./animated-wave";
 
 const footerLinks = {
   Services: [
-    { name: "Data & Analytics Platforms", href: "#features" },
-    { name: "AI / ML Engineering", href: "#features" },
-    { name: "Cloud & Platform Engineering", href: "#features" },
-    { name: "Security & Governance", href: "#features" },
+    { name: "AI Ops", href: "#aiops" },
+    { name: "Product Development", href: "#features" },
+    { name: "Data & Analytics Platform", href: "#features" },
+    { name: "Digital Transformation", href: "#features" },
+    { name: "Recruiting", href: "#features" },
   ],
   Delivery: [
+    { name: "OnShore US", href: "#delivery" },
     { name: "NearShore LATAM", href: "#delivery" },
     { name: "OffShore Europe/Asia", href: "#delivery" },
     { name: "Dedicated Pods", href: "#delivery" },
@@ -56,7 +58,7 @@ export function FooterSection() {
                 Enterprise AI & Data Platform Engineering. Global delivery with enterprise controls.
               </p>
               <p className="text-sm text-muted-foreground mb-8 max-w-xs border-l-2 border-foreground/20 pl-4">
-                We support vendor onboarding, security questionnaires, and architecture reviews.
+                We support vendor onboarding, security reviews, and compliance documentation — delivered by our global experts.
               </p>
 
               {/* Social Links */}

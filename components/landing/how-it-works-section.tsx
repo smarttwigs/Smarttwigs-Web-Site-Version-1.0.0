@@ -98,6 +98,9 @@ export function HowItWorksSection() {
             <br />
             <span className="text-background/50">From concept to delivery.</span>
           </h2>
+          <p className="mt-6 text-background/60 max-w-2xl">
+            Led by senior global experts, with runbooks and documentation you can hand to customers or auditors.
+          </p>
         </div>
 
         {/* Main content */}

@@ -5,27 +5,39 @@ import { useEffect, useRef, useState } from "react";
 const features = [
   {
     number: "01",
-    title: "Data & Analytics Platforms",
-    description: "Modern lakehouse and warehouse architectures, real-time streaming pipelines, orchestration frameworks, and data quality engineering for governed, reliable data at scale.",
+    title: "Product Development",
+    description: "End-to-end product delivery from discovery to scale — with software engineering at the core. Architecture, APIs, cloud-native build, testing, CI/CD, and maintainable systems that support growth and retention.",
     visual: "deploy",
   },
   {
     number: "02",
-    title: "AI / ML Engineering",
-    description: "End-to-end MLOps pipelines, LLM evaluation and fine-tuning, model monitoring, inference optimization, and AI governance frameworks for production-ready ML systems.",
-    visual: "ai",
-  },
-  {
-    number: "03",
-    title: "Cloud & Platform Engineering",
-    description: "Infrastructure as Code (IaC), CI/CD automation, observability stacks, reliability engineering, and FinOps practices for cost-efficient cloud operations.",
+    title: "Data & Analytics Platform",
+    description: "Modern data platforms spanning OLTP + OLAP: lakehouse/warehouse, streaming, orchestration, data quality, semantic layers, governed access, and performance at scale.",
     visual: "collab",
   },
   {
+    number: "03",
+    title: "Digital Transformation",
+    description: "Modernization with today's toolchain: cloud-native platforms, automation, observability, and AI-assisted delivery. Replace manual workflows with measurable, secure, AI-enabled operations.",
+    visual: "ai",
+  },
+  {
     number: "04",
+    title: "AI Ops",
+    description: "Operate AI/ML + LLM systems in production: monitoring, evaluation gates, incident response, model/prompt versioning, governance workflows, and cost controls (FinOps).",
+    visual: "ai",
+  },
+  {
+    number: "05",
     title: "Security & Governance",
     description: "Data classification, access controls (RBAC/ABAC), audit trails, lineage tracking, and compliance-ready architectures aligned with enterprise security standards.",
     visual: "security",
+  },
+  {
+    number: "06",
+    title: "Recruiting",
+    description: "Elite engineering talent on-demand: ex-FAANG and top American engineers, plus a global workforce. NearShore: Panama, Colombia, Ecuador, Peru, Chile. OffShore Europe: Romania, Moldova, Bulgaria. OffShore Asia: India, Israel, Saudi Arabia, Thailand, Singapore.",
+    visual: "collab",
   },
 ];
 
@@ -329,8 +341,13 @@ export function FeaturesSection() {
         <div className="mb-16 lg:mb-24">
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
             <span className="w-8 h-px bg-foreground/30" />
-            Platform Engineering
+            Our Services
           </span>
+          <div className="flex flex-wrap items-center gap-3 mb-6">
+            <span className="px-3 py-1 text-xs font-mono bg-foreground text-background rounded-full">Enterprise-ready</span>
+            <span className="px-3 py-1 text-xs font-mono bg-foreground/10 border border-foreground/20 rounded-full">Global experts</span>
+            <span className="px-3 py-1 text-xs font-mono bg-foreground/10 border border-foreground/20 rounded-full">Fast start</span>
+          </div>
           <h2
             className={`text-4xl lg:text-6xl font-display tracking-tight transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"

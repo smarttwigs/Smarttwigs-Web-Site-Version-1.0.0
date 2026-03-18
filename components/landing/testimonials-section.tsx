@@ -146,8 +146,11 @@ export function TestimonialsSection() {
 
         {/* Selected Experience */}
         <div className="mt-16 pt-12 border-t border-foreground/10">
-          <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase mb-6 text-center">
+          <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase mb-2 text-center">
             Selected Experience (Anonymized)
+          </p>
+          <p className="text-sm text-muted-foreground/70 mb-6 text-center italic">
+            Case studies and references available under NDA.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {selectedExperience.map((exp) => (

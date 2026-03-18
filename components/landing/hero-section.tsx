@@ -103,14 +103,41 @@ export function HeroSection() {
         
         {/* Description */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-end">
-          <p 
-            className={`text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-xl transition-all duration-700 delay-200 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
-          >
-            We design and deliver modern data platforms, ML/LLM systems, and governed analytics that meet 
-            enterprise standards for security, compliance, reliability, and cost control.
-          </p>
+          <div>
+            <p 
+              className={`text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-xl transition-all duration-700 delay-200 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
+            >
+              We design and deliver modern data platforms, ML/LLM systems, and governed analytics that meet 
+              enterprise standards for security, compliance, reliability, and cost control.
+            </p>
+            <p 
+              className={`mt-4 text-base text-muted-foreground/80 leading-relaxed max-w-xl transition-all duration-700 delay-300 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
+            >
+              Delivered by our global experts in product development engineering, strategic market fit 
+              and retention design, data platforms, AI, and ML/LLM operations.
+            </p>
+            
+            {/* SMB Badges */}
+            <div 
+              className={`mt-6 flex flex-wrap gap-3 transition-all duration-700 delay-400 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
+            >
+              <span className="px-3 py-1.5 text-xs font-mono bg-foreground/5 border border-foreground/10 rounded-full">
+                Fast start (2 weeks)
+              </span>
+              <span className="px-3 py-1.5 text-xs font-mono bg-foreground/5 border border-foreground/10 rounded-full">
+                Outcome-driven
+              </span>
+              <span className="px-3 py-1.5 text-xs font-mono bg-foreground/5 border border-foreground/10 rounded-full">
+                Enterprise-ready
+              </span>
+            </div>
+          </div>
           
           {/* CTAs */}
           <div 
