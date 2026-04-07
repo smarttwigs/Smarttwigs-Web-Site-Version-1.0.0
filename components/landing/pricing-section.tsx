@@ -4,50 +4,75 @@ import { ArrowRight, Check } from "lucide-react";
 
 const services = [
   {
-    name: "Data & Analytics",
-    description: "Extract insights and drive decisions",
+    name: "Product Development",
+    description: "AI-assisted delivery from zero to scale",
     price: { monthly: null, annual: null },
     features: [
-      "Data science consulting",
-      "Machine learning solutions",
-      "Business intelligence",
-      "Predictive analytics",
-      "Data visualization",
+      "Architecture, APIs & cloud-native build",
+      "AI-accelerated engineering workflows",
+      "Testing, CI/CD & maintainable systems",
+      "System integrations & modernization",
+      "Mobile, web & embedded platforms",
+      "Global AI engineers, fast onboard",
     ],
-    cta: "Learn more",
+    cta: "Get in touch",
     popular: false,
   },
   {
-    name: "Software Development",
-    description: "Custom solutions for your business",
+    name: "Recruiting",
+    description: "Elite AI, Engineering, and Product talent worldwide",
     price: { monthly: null, annual: null },
     features: [
-      "Custom web applications",
-      "Mobile app development",
-      "System integrations",
-      "Cloud migrations",
-      "API development",
-      "Legacy modernization",
-      "Security implementation",
+      "Ex-FAANG & top American AI engineers",
+      "NearShore: Panama, Colombia, Ecuador, Peru, Chile",
+      "OffShore Europe: Romania, Moldova, Bulgaria",
+      "OffShore Asia: India, Israel, Saudi Arabia, Thailand, Singapore",
+      "Global AI delivery pods on demand",
     ],
-    cta: "Get in touch",
+    cta: "Contact us",
+    popular: false,
+  },
+  {
+    name: "AI Ops",
+    description: "Run AI/ML + LLM systems in production",
+    price: { monthly: null, annual: null },
+    features: [
+      "Model & prompt versioning",
+      "Monitoring, evals & incident response",
+      "Governance & compliance workflows",
+      "FinOps / AI cost controls",
+      "Global AI Ops experts on demand",
+    ],
+    cta: "Learn more",
     popular: true,
   },
   {
     name: "Digital Transformation",
-    description: "End-to-end business evolution",
+    description: "Modernize with AI at the center",
     price: { monthly: null, annual: null },
     features: [
-      "Full technology audit",
-      "Strategic roadmapping",
-      "Process automation",
-      "Change management",
-      "Technical leadership",
-      "Ongoing partnership",
-      "Training & enablement",
-      "24/7 dedicated support",
+      "Cloud-native migration & automation",
+      "AI-assisted delivery & observability",
+      "Replace manual ops with AI workflows",
+      "Compliance-ready architecture",
+      "Technical leadership & roadmapping",
+      "Measurable, secure AI-enabled ops",
     ],
     cta: "Contact us",
+    popular: false,
+  },
+  {
+    name: "Data & Analytics Platform",
+    description: "AI-ready data infrastructure at any scale",
+    price: { monthly: null, annual: null },
+    features: [
+      "OLTP + OLAP: lakehouse / warehouse",
+      "Streaming, orchestration & data quality",
+      "AI/ML feature stores & pipelines",
+      "Semantic layers & governed access",
+      "Global AI data experts on demand",
+    ],
+    cta: "Learn more",
     popular: false,
   },
 ];
@@ -67,14 +92,14 @@ export function PricingSection() {
             <span className="text-stroke">from A to Z</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl">
-            From conception and development to integration and ongoing support. We provide comprehensive technology services tailored to your business needs.
+            From AI-first product teams to global delivery pods — our network of elite AI and engineering experts helps you build faster, operate smarter, and stay compliant.
           </p>
         </div>
 
         
 
         {/* Services Cards */}
-        <div className="grid md:grid-cols-3 gap-px bg-foreground/10">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-px bg-foreground/10">
           {services.map((plan, idx) => (
             <div
               key={plan.name}
@@ -98,9 +123,7 @@ export function PricingSection() {
               </div>
 
               {/* Price */}
-              <div className="mb-8 pb-8 border-b border-foreground/10">
-                <span className="font-display text-4xl text-foreground">Custom</span>
-              </div>
+              <div className="mb-8 pb-8 border-b border-foreground/10" />
 
               {/* Features */}
               <ul className="space-y-4 mb-10">

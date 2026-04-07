@@ -12,6 +12,7 @@ smarttwigs.solution({
   services: [
     'software-development',
     'cloud-migration',
+    'ai-copilot-workflows',
     'system-integration'
   ]
 })`,
@@ -23,6 +24,7 @@ smarttwigs.solution({
   area: 'fintech',
   services: [
     'risk-analytics',
+    'ai-fraud-detection',
     'trading-systems',
     'compliance-automation'
   ]
@@ -35,6 +37,7 @@ smarttwigs.solution({
   area: 'healthtech',
   services: [
     'data-analytics',
+    'ai-clinical-insights',
     'patient-systems',
     'research-platforms'
   ]
@@ -47,8 +50,74 @@ smarttwigs.solution({
   area: 'retail-tech',
   services: [
     'inventory-systems',
+    'ai-recommendation-engine',
     'customer-analytics',
     'digital-commerce'
+  ]
+})`,
+  },
+  {
+    label: "Media",
+    code: `// Media & Entertainment
+smarttwigs.solution({
+  area: 'media-tech',
+  services: [
+    'streaming-platforms',
+    'ai-content-personalization',
+    'content-management',
+    'audience-analytics'
+  ]
+})`,
+  },
+  {
+    label: "Education",
+    code: `// Education & EdTech
+smarttwigs.solution({
+  area: 'edtech',
+  services: [
+    'learning-platforms',
+    'ai-adaptive-learning',
+    'student-analytics',
+    'curriculum-systems'
+  ]
+})`,
+  },
+  {
+    label: "E-commerce",
+    code: `// E-commerce & Marketplace
+smarttwigs.solution({
+  area: 'commerce-platform',
+  services: [
+    'marketplace-build',
+    'ai-propensity-scoring',
+    'payment-integration',
+    'fulfillment-systems'
+  ]
+})`,
+  },
+  {
+    label: "Manufacturing",
+    code: `// Manufacturing & Industrial
+smarttwigs.solution({
+  area: 'industry-4.0',
+  services: [
+    'process-automation',
+    'ai-predictive-maintenance',
+    'supply-chain-analytics',
+    'quality-systems'
+  ]
+})`,
+  },
+  {
+    label: "NGOs",
+    code: `// Non-Profit & NGOs
+smarttwigs.solution({
+  area: 'social-impact',
+  services: [
+    'ai-donor-insights',
+    'impact-analytics',
+    'donor-platforms',
+    'program-management'
   ]
 })`,
   },
@@ -175,7 +244,7 @@ export function DevelopersSection() {
           >
             <div className="border border-foreground/10">
               {/* Tabs */}
-              <div className="flex items-center border-b border-foreground/10">
+              <div className="flex items-center border-b border-foreground/10 overflow-x-auto scrollbar-hide">
                 {industries.map((example, idx) => (
                   <button
                     key={example.label}

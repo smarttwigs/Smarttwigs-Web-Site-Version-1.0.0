@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { AnimatedSphere } from "./animated-sphere";
 
-const words = ["Technology", "Innovation", "Solutions", "Results"];
+const words = ["Innovation", "AI", "Engineering", "Compliance", "Solutions", "Results"];
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,7 +18,7 @@ export function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setWordIndex((prev) => (prev + 1) % words.length);
-    }, 2500);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -28,7 +28,7 @@ export function HeroSection() {
       <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] lg:w-[800px] lg:h-[800px] opacity-40 pointer-events-none">
         <AnimatedSphere />
       </div>
-      
+
       {/* Subtle grid lines */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
         {[...Array(8)].map((_, i) => (
@@ -54,32 +54,30 @@ export function HeroSection() {
           />
         ))}
       </div>
-      
+
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 pt-32 lg:pt-40 pb-48 lg:pb-56">
         {/* Eyebrow */}
-        <div 
-          className={`mb-8 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
+        <div
+          className={`mb-8 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
         >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground">
             <span className="w-8 h-px bg-foreground/30" />
-            Data & Software Enterprise Services
+            AI, Data & Software Enterprise Services
           </span>
         </div>
-        
+
         {/* Main headline */}
         <div className="mb-12">
-          <h1 
-            className={`text-[clamp(2.5rem,9vw,7rem)] font-display leading-[0.95] tracking-tight transition-all duration-1000 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
+          <h1
+            className={`text-[clamp(2.5rem,9vw,7rem)] font-display leading-[0.95] tracking-tight transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
           >
             <span className="block">Value through</span>
-            <span className="block whitespace-nowrap">
+            <span className="block">
               Data &{" "}
               <span className="relative inline-block">
-                <span 
+                <span
                   key={wordIndex}
                   className="inline-flex"
                 >
@@ -100,57 +98,53 @@ export function HeroSection() {
             </span>
           </h1>
         </div>
-        
+
         {/* Description */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-end">
-          <p 
-            className={`text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-xl transition-all duration-700 delay-200 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
+          <p
+            className={`text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-xl transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
           >
-            Smarttwigs is made up of innovative technology specialists offering comprehensive digital solutions. 
-            We create value by transforming entire data and product portfolios with cutting-edge technology.
+            Smarttwigs is a global network of AI, data and product engineering experts. We help AI-first organizations build faster, operate smarter, and stay compliant — with elite talent, modern tooling, and measurable outcomes.
           </p>
-          
+
           {/* CTAs */}
-          <div 
-            className={`flex flex-col sm:flex-row items-start gap-4 transition-all duration-700 delay-300 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
+          <div
+            className={`flex flex-col sm:flex-row items-start gap-4 transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
           >
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
             >
               Get in touch
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
+            <Button
+              size="lg"
+              variant="outline"
               className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
             >
               Our Services
             </Button>
           </div>
         </div>
-        
+
       </div>
-      
+
       {/* Stats marquee - full width outside container */}
-      <div 
-        className={`absolute bottom-8 left-0 right-0 transition-all duration-700 delay-500 ${
-          isVisible ? "opacity-100" : "opacity-0"
-        }`}
+      <div
+        className={`absolute bottom-8 left-0 right-0 transition-all duration-700 delay-500 ${isVisible ? "opacity-100" : "opacity-0"
+          }`}
       >
         <div className="flex gap-16 marquee whitespace-nowrap">
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-16">
               {[
-                { value: "Global", label: "software consultancy", company: "REACH" },
-                { value: "Full", label: "digital solutions", company: "SUITE" },
+                { value: "AI-First", label: "engineering experts", company: "EXPERTISE" },
+                { value: "Global", label: "delivery pods", company: "REACH" },
                 { value: "24/7", label: "dedicated support", company: "SERVICE" },
-                { value: "100%", label: "client focused", company: "APPROACH" },
+                { value: "100%", label: "compliance-ready", company: "STANDARDS" },
               ].map((stat) => (
                 <div key={`${stat.company}-${i}`} className="flex items-baseline gap-4">
                   <span className="text-4xl lg:text-5xl font-display">{stat.value}</span>
@@ -164,9 +158,9 @@ export function HeroSection() {
           ))}
         </div>
       </div>
-      
+
       {/* Scroll indicator */}
-      
+
     </section>
   );
 }

@@ -5,6 +5,7 @@ import { AnimatedWave } from "./animated-wave";
 
 const footerLinks = {
   Services: [
+    { name: "Recruiting", href: "#features" },
     { name: "Data Science & A.I.", href: "#features" },
     { name: "System Integrations", href: "#features" },
     { name: "Mobile & Cloud Apps", href: "#features" },
@@ -16,6 +17,10 @@ const footerLinks = {
     { name: "Financial Services", href: "#developers" },
     { name: "Healthcare", href: "#developers" },
     { name: "Retail & E-commerce", href: "#developers" },
+    { name: "Media", href: "#developers" },
+    { name: "Education", href: "#developers" },
+    { name: "Manufacturing", href: "#developers" },
+    { name: "NGOs", href: "#developers" },
   ],
   Company: [
     { name: "About Us", href: "#" },
@@ -54,7 +59,7 @@ export function FooterSection() {
               </a>
 
               <p className="text-muted-foreground leading-relaxed mb-8 max-w-xs">
-                Smart Twigs is made up of innovative technology specialists offering comprehensive digital solutions and professional services worldwide.
+                Smart Twigs is a global network of AI, data and product engineering experts delivering comprehensive digital solutions and professional services worldwide.
               </p>
 
               {/* Social Links */}

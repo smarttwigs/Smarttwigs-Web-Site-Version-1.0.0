@@ -4,18 +4,18 @@ import { useEffect, useState } from "react";
 
 const testimonials = [
   {
-    quote: "Smart Twigs delivered a comprehensive data analytics platform that transformed our decision-making process entirely.",
+    quote: "Smart Twigs built our AI data platform from scratch — governance, pipelines, and semantic layer included. We went from raw data to production-grade AI in weeks.",
     author: "Michael Torres",
     role: "Chief Data Officer",
     company: "Global Finance Corp",
-    metric: "3x faster insights",
+    metric: "Production AI in weeks",
   },
   {
-    quote: "Their team integrated our legacy systems with modern cloud infrastructure seamlessly. Exceptional technical expertise.",
+    quote: "Their compliance-ready architecture let us pass our SOC 2 audit without slowing down engineering. Rare combination of speed and rigor.",
     author: "Jennifer Walsh",
     role: "VP of Technology",
     company: "Healthcare Solutions",
-    metric: "Zero downtime migration",
+    metric: "SOC 2 passed, zero delays",
   },
   {
     quote: "The AI solution they built has automated 60% of our manual processes. A true technology partner.",
@@ -25,11 +25,11 @@ const testimonials = [
     metric: "60% process automation",
   },
   {
-    quote: "From concept to production, Smart Twigs guided us through every step of our digital transformation journey.",
-    author: "Amanda Foster",
-    role: "CEO",
-    company: "Innovation Labs",
-    metric: "Full digital transformation",
+    quote: "The global delivery pod model gave us ex-FAANG AI engineers at a fraction of the cost. Exceptional talent, seamlessly integrated with our team.",
+    author: "Marcus Chen",
+    role: "CTO",
+    company: "Scale AI Ventures",
+    metric: "3x engineering capacity",
   },
 ];
 

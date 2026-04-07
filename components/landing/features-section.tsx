@@ -5,39 +5,104 @@ import { useEffect, useRef, useState } from "react";
 const features = [
   {
     number: "01",
-    title: "Data Science and A.I. Development",
-    description: "Our leading data scientists extract any insights and learning to improve our clients' services and decision-making processes.",
-    visual: "ai",
+    title: "Recruiting",
+    description: "Placement and augmentation of 90+ teams with experts in AI, Data Engineering, Backend, and Frontend from LATAM and Asia — embedded in Fortune 1000/500/100 organizations.",
+    visual: "collab",
+    useCases: [
+      "Scholastic", "JPMorgan", "Morgan Stanley", "EPIC Systems", "Veris Urgent Care",
+      "Benev Foundation", "Pure Green", "Poze Dating", "Nyma", "BrickBids",
+      "NuezHR", "Redeemer Rewards", "Virtual Watercooler", "Knock AI", "Wattle Cafe",
+    ],
   },
   {
     number: "02",
-    title: "System Integrations",
-    description: "We leverage any existing technologies available to scale your operations, connecting disparate systems into seamless workflows.",
-    visual: "deploy",
+    title: "Data Science and A.I. Development",
+    description: "Production-grade AI and data engineering — from predictive models and LLM pipelines to real-time analytics. We build the infrastructure that turns raw data into revenue, whether you're a Series A startup or a Fortune 500.",
+    visual: "ai",
+    useCases: [
+      "Propensity scoring & purchase behavior attribution",
+      "Content & product recommendation engines",
+      "Real-time AI ad & compliance scoring",
+      "RAG infrastructure with internal agent creation (fintech)",
+      "N8N automation for multi-model code & product review",
+      "Biometric telemetry centralization & healthcare dashboards",
+      "Pharmaceutical manufacturing data pipelines",
+      "Customer churn prediction & retention models",
+    ],
   },
   {
     number: "03",
-    title: "Mobile & Cloud Applications",
-    description: "Our teams are focused on keeping our clients relevant to the ever evolving tech landscape with cutting-edge solutions.",
-    visual: "collab",
+    title: "System Integrations",
+    description: "We leverage any existing technologies available to scale your operations, connecting disparate systems into seamless workflows.",
+    visual: "deploy",
+    useCases: [
+      "Square integration with Grubhub, UberEats, DoorDash & Seamless",
+      "Oracle ERP integration",
+      "QuickBooks integration",
+      "Stripe integration",
+      "PayPal integration",
+      "Salesforce integrations",
+      "Stibo STEP integrations",
+      "Reltio integrations",
+      "Zapier orchestration",
+      "n8n orchestration & WhatsApp notification platform",
+    ],
   },
   {
     number: "04",
-    title: "Security Management & Development",
-    description: "Leading security experts from the largest institutions in the world lower cyber risk to your company.",
-    visual: "security",
+    title: "Mobile & Cloud Applications",
+    description: "Our teams are focused on keeping our clients relevant to the ever evolving tech landscape with cutting-edge solutions.",
+    visual: "collab",
+    useCases: [
+      "Cross-platform mobile apps (React Native / Flutter)",
+      "Cloud-native microservices on AWS, GCP & Azure",
+      "Real-time collaboration platforms",
+      "Progressive web apps with offline-first architecture",
+      "IoT dashboard & device management portals",
+      "Multi-tenant SaaS with AI personalization layers",
+    ],
   },
   {
     number: "05",
-    title: "Technical Management",
-    description: "We will integrate broad communication strategies into your corporate processes for seamless operations.",
-    visual: "collab",
+    title: "Security Management & Development",
+    description: "Leading security experts from the largest institutions in the world lower cyber risk to your company.",
+    visual: "security",
+    useCases: [
+      "Penetration testing & vulnerability assessments",
+      "Compliance scoring for data platforms",
+      "SOC 2 & ISO 27001 audit preparation",
+      "GDPR & HIPAA compliance architecture",
+      "AI-assisted threat detection & zero-trust implementation",
+      "Security incident response & forensics",
+    ],
   },
   {
     number: "06",
+    title: "Technical Management",
+    description: "We will integrate broad communication strategies into your corporate processes for seamless operations.",
+    visual: "collab",
+    useCases: [
+      "Fractional CTO & VP Engineering engagements",
+      "Agile transformation & delivery coaching",
+      "Engineering org design & hiring strategy",
+      "Vendor evaluation & technology selection",
+      "Technical due diligence for M&A",
+      "OKR & KPI frameworks for engineering teams",
+    ],
+  },
+  {
+    number: "07",
     title: "Product Development",
     description: "We'll manage and oversee the development of products from concept to post-production delivery.",
     visual: "deploy",
+    useCases: [
+      "0-to-1 MVP builds for funded startups",
+      "Product-market fit experimentation frameworks",
+      "Legacy product modernization & re-platforming",
+      "Design system creation & component libraries",
+      "AI-enhanced user research & rapid prototyping",
+      "Growth engineering & A/B testing",
+    ],
   },
 ];
 
@@ -263,6 +328,7 @@ function AnimatedVisual({ type }: { type: string }) {
 
 function FeatureCard({ feature, index }: { feature: typeof features[0]; index: number }) {
   const [isVisible, setIsVisible] = useState(false);
+  const [useCasesOpen, setUseCasesOpen] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -300,6 +366,25 @@ function FeatureCard({ feature, index }: { feature: typeof features[0]; index: n
             <p className="text-lg text-muted-foreground leading-relaxed">
               {feature.description}
             </p>
+            {feature.useCases.length > 0 && (
+              <div className="mt-6">
+                <button
+                  type="button"
+                  onClick={() => setUseCasesOpen(!useCasesOpen)}
+                  className="flex items-center gap-2 font-mono text-xs text-muted-foreground uppercase tracking-widest hover:text-foreground transition-colors"
+                >
+                  Use Cases
+                  <span className={`transition-transform duration-300 ${useCasesOpen ? "rotate-180" : ""}`}>&#9662;</span>
+                </button>
+                <div className={`mt-3 flex flex-wrap gap-2 overflow-hidden transition-all duration-500 ${useCasesOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
+                  {feature.useCases.map((uc) => (
+                    <span key={uc} className="inline-block px-3 py-1 text-xs font-mono text-muted-foreground border border-foreground/10 rounded-full">
+                      {uc}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
           
           {/* Visual */}

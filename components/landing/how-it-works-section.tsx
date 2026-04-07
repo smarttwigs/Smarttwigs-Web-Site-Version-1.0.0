@@ -6,7 +6,7 @@ const steps = [
   {
     number: "I",
     title: "Discovery & Analysis",
-    description: "We analyze your current systems and identify gaps in both back-end and front-end operations to maximize ROI.",
+    description: "We assess your AI readiness, data architecture, compliance posture, and existing stack to identify the highest-leverage opportunities.",
     code: `// Initial Assessment
 smarttwigs.analyze({
   systems: 'existing-stack',
@@ -16,20 +16,20 @@ smarttwigs.analyze({
   {
     number: "II",
     title: "Strategy & Development",
-    description: "Our specialists develop concepts and comprehensive solutions based on cutting-edge technology.",
+    description: "Our global AI and engineering experts design and build solutions using modern AI tooling, cloud-native platforms, and compliance-ready architecture.",
     code: `smarttwigs.develop({
-  approach: 'agile',
+  approach: 'ai-first',
   solutions: [
-    'data-pipeline',
-    'integration', 
-    'security'
+    'ai-pipeline',
+    'compliance',
+    'data-platform'
   ]
 })`,
   },
   {
     number: "III",
     title: "Integration & Support",
-    description: "We integrate solutions into your corporate processes and provide ongoing support for continuous improvement.",
+    description: "We deploy to production, integrate into your workflows, and provide ongoing AI Ops support — with governance and compliance built in from day one.",
     code: `smarttwigs.deploy({
   target: 'production',
   support: '24/7'

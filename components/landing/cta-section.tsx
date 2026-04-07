@@ -58,8 +58,7 @@ export function CtaSection() {
                 </h2>
 
                 <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
-                  Partner with Smart Twigs to unlock the full potential of your data and technology. 
-                  Let&apos;s create value through innovation together.
+                  Partner with Smart Twigs to ship AI-first products, operate with confidence, and stay compliant at any scale. Global experts, fast start, measurable outcomes.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
@@ -80,7 +79,7 @@ export function CtaSection() {
                 </div>
 
                 <p className="text-sm text-muted-foreground mt-8 font-mono">
-                  No commitment required - let&apos;s discuss your project
+                  No commitment required — let&apos;s assess your AI readiness
                 </p>
               </div>
 

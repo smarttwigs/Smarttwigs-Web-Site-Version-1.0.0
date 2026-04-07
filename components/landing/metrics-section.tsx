@@ -49,7 +49,7 @@ const metrics = [
     value: 250, 
     suffix: "+", 
     prefix: "",
-    label: "Projects delivered worldwide",
+    label: "AI & data projects delivered",
   },
   { 
     value: 98, 
@@ -61,7 +61,7 @@ const metrics = [
     value: 50, 
     suffix: "+", 
     prefix: "",
-    label: "Technology specialists",
+    label: "Global AI & engineering experts",
   },
   { 
     value: 15, 
