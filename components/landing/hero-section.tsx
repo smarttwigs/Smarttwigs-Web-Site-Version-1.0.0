@@ -113,13 +113,15 @@ export function HeroSection() {
             className={`flex flex-col sm:flex-row items-start gap-4 transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
           >
-            <Button
-              size="lg"
-              className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
-            >
-              Get in touch
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <a href="https://calendly.com/smarttwigs/30min" target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
+              >
+                Get in touch
+                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </a>
             <Button
               size="lg"
               variant="outline"

@@ -57,14 +57,16 @@ export function CompetenceNav() {
           </div>
 
           <div className="flex items-center gap-4">
-            <Button
-              size="sm"
-              className={`bg-foreground hover:bg-foreground/90 text-background rounded-full transition-all duration-500 ${
-                isScrolled ? "px-4 h-8 text-xs" : "px-6"
-              }`}
-            >
-              Talk to an expert
-            </Button>
+            <a href="https://calendly.com/smarttwigs/30min" target="_blank" rel="noopener noreferrer">
+              <Button
+                size="sm"
+                className={`bg-foreground hover:bg-foreground/90 text-background rounded-full transition-all duration-500 ${
+                  isScrolled ? "px-4 h-8 text-xs" : "px-6"
+                }`}
+              >
+                Talk to an expert
+              </Button>
+            </a>
           </div>
         </div>
       </nav>

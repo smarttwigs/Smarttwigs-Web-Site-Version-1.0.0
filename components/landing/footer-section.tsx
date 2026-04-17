@@ -25,8 +25,8 @@ const footerLinks = {
   Company: [
     { name: "About Us", href: "#" },
     { name: "Our Process", href: "#how-it-works" },
-    { name: "Careers", href: "#", badge: "Hiring" },
-    { name: "Contact", href: "#pricing" },
+    { name: "Careers", href: "https://www.indeed.com/cmp/Smarttwigs/jobs", badge: "Hiring" },
+    { name: "Contact", href: "https://calendly.com/smarttwigs/30min" },
   ],
   Legal: [
     { name: "Privacy Policy", href: "#" },
