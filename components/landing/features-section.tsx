@@ -1,13 +1,25 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { ArrowUpRight } from "lucide-react";
 
-const features = [
+interface Feature {
+  number: string;
+  title: string;
+  description: string;
+  visual: string;
+  href: string | null;
+  useCases: string[];
+}
+
+const features: Feature[] = [
   {
     number: "01",
     title: "Recruiting",
     description: "Placement and augmentation of 90+ teams with experts in AI, Data Engineering, Backend, and Frontend from LATAM and Asia — embedded in Fortune 1000/500/100 organizations.",
     visual: "collab",
+    href: "/recruiting",
     useCases: [
       "Scholastic", "JPMorgan", "Morgan Stanley", "EPIC Systems", "Veris Urgent Care",
       "Benev Foundation", "Pure Green", "Poze Dating", "Nyma", "BrickBids",
@@ -19,6 +31,7 @@ const features = [
     title: "Data Science and A.I. Development",
     description: "Production-grade AI and data engineering — from predictive models and LLM pipelines to real-time analytics. We build the infrastructure that turns raw data into revenue, whether you're a Series A startup or a Fortune 500.",
     visual: "ai",
+    href: "/ai",
     useCases: [
       "Propensity scoring & purchase behavior attribution",
       "Content & product recommendation engines",
@@ -35,6 +48,7 @@ const features = [
     title: "System Integrations",
     description: "We leverage any existing technologies available to scale your operations, connecting disparate systems into seamless workflows.",
     visual: "deploy",
+    href: "/integrations",
     useCases: [
       "Square integration with Grubhub, UberEats, DoorDash & Seamless",
       "Oracle ERP integration",
@@ -53,6 +67,7 @@ const features = [
     title: "Mobile & Cloud Applications",
     description: "Our teams are focused on keeping our clients relevant to the ever evolving tech landscape with cutting-edge solutions.",
     visual: "collab",
+    href: "/mobile-cloud",
     useCases: [
       "Cross-platform mobile apps (React Native / Flutter)",
       "Cloud-native microservices on AWS, GCP & Azure",
@@ -67,6 +82,7 @@ const features = [
     title: "Security Management & Development",
     description: "Leading security experts from the largest institutions in the world lower cyber risk to your company.",
     visual: "security",
+    href: "/security",
     useCases: [
       "Penetration testing & vulnerability assessments",
       "Compliance scoring for data platforms",
@@ -81,6 +97,7 @@ const features = [
     title: "Technical Management",
     description: "We will integrate broad communication strategies into your corporate processes for seamless operations.",
     visual: "collab",
+    href: "/technical-management",
     useCases: [
       "Fractional CTO & VP Engineering engagements",
       "Agile transformation & delivery coaching",
@@ -95,6 +112,7 @@ const features = [
     title: "Product Development",
     description: "We'll manage and oversee the development of products from concept to post-production delivery.",
     visual: "deploy",
+    href: "/product-development",
     useCases: [
       "0-to-1 MVP builds for funded startups",
       "Product-market fit experimentation frameworks",
@@ -360,9 +378,21 @@ function FeatureCard({ feature, index }: { feature: typeof features[0]; index: n
         {/* Content */}
         <div className="flex-1 grid lg:grid-cols-2 gap-8 items-center">
           <div>
-            <h3 className="text-3xl lg:text-4xl font-display mb-4 group-hover:translate-x-2 transition-transform duration-500">
-              {feature.title}
-            </h3>
+            {feature.href ? (
+              <Link
+                href={feature.href}
+                className="inline-flex items-center gap-3 mb-4 group-hover:translate-x-2 transition-transform duration-500"
+              >
+                <h3 className="text-3xl lg:text-4xl font-display">
+                  {feature.title}
+                </h3>
+                <ArrowUpRight className="w-6 h-6 lg:w-8 lg:h-8 text-foreground/40 group-hover:text-foreground transition-colors" />
+              </Link>
+            ) : (
+              <h3 className="text-3xl lg:text-4xl font-display mb-4 group-hover:translate-x-2 transition-transform duration-500">
+                {feature.title}
+              </h3>
+            )}
             <p className="text-lg text-muted-foreground leading-relaxed">
               {feature.description}
             </p>

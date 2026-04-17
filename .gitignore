@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 
+# static export
+/out
+
 # next.js
 /.next/
 /out/

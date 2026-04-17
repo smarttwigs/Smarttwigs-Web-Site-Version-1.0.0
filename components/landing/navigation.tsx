@@ -1,14 +1,25 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
+
+const competenceItems = [
+  { name: "Recruiting", href: "/recruiting" },
+  { name: "Data Science & A.I.", href: "/ai" },
+  { name: "System Integrations", href: "/integrations" },
+  { name: "Mobile & Cloud", href: "/mobile-cloud" },
+  { name: "Security", href: "/security" },
+  { name: "Technical Management", href: "/technical-management" },
+  { name: "Product Development", href: "/product-development" },
+];
 
 const navLinks = [
-  { name: "Competence Areas", href: "#features" },
-  { name: "Our Process", href: "#how-it-works" },
-  { name: "Industries", href: "#developers" },
-  { name: "Services", href: "#pricing" },
+  { name: "Competence Areas", href: "#features", dropdown: true },
+  { name: "Our Process", href: "#how-it-works", dropdown: false },
+  { name: "Industries", href: "#developers", dropdown: false },
+  { name: "Services", href: "#pricing", dropdown: false },
 ];
 
 export function Navigation() {
@@ -60,16 +71,48 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-12">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-sm text-foreground/70 hover:text-foreground transition-colors duration-300 relative group"
-              >
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-foreground transition-all duration-300 group-hover:w-full" />
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.dropdown ? (
+                <div key={link.name} className="relative group/dropdown">
+                  <a
+                    href={link.href}
+                    className="text-sm text-foreground/70 hover:text-foreground transition-colors duration-300 relative inline-flex items-center gap-1"
+                  >
+                    {link.name}
+                    <svg className="w-3 h-3 transition-transform duration-300 group-hover/dropdown:rotate-180" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M3 5 L6 8 L9 5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-foreground transition-all duration-300 group-hover/dropdown:w-full" />
+                  </a>
+
+                  {/* Dropdown */}
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 translate-y-2 pointer-events-none group-hover/dropdown:opacity-100 group-hover/dropdown:translate-y-0 group-hover/dropdown:pointer-events-auto transition-all duration-300">
+                    <div className="bg-background/95 backdrop-blur-xl border border-foreground/10 rounded-xl shadow-xl p-2 min-w-[240px]">
+                      {competenceItems.map((item, i) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="flex items-center justify-between px-4 py-2.5 text-sm text-foreground/70 hover:text-foreground hover:bg-foreground/5 rounded-lg transition-all duration-200 group/item"
+                          style={{ animationDelay: `${i * 30}ms` }}
+                        >
+                          <span>{item.name}</span>
+                          <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-200" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-sm text-foreground/70 hover:text-foreground transition-colors duration-300 relative group"
+                >
+                  {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-foreground transition-all duration-300 group-hover:w-full" />
+                </a>
+              )
+            )}
           </div>
 
           {/* Desktop CTA */}
